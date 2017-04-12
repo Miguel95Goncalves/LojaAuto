@@ -15,6 +15,9 @@ import java.awt.SystemColor;
 import javax.swing.SwingConstants;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
 public class Clientes extends JFrame {
 
@@ -48,10 +51,15 @@ public class Clientes extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnAdd = new JButton("");
+		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnAdd.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				ClienteAdd cliAdd = new ClienteAdd();
+				JFrame cliAdd = new JFrame("Frame Interna");
+				cliAdd.add(new ClienteAdd());
 				cliAdd.setVisible(true);
 			}
 		});
@@ -108,5 +116,10 @@ public class Clientes extends JFrame {
 		btnVolt.setBackground(new Color(230, 230, 250));
 		btnVolt.setBounds(10, 211, 64, 64);
 		contentPane.add(btnVolt);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon(Clientes.class.getResource("/imagens/fundo.jpg")));
+		label.setBounds(0, 0, 409, 287);
+		contentPane.add(label);
 	}
 }

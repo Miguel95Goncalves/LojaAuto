@@ -17,6 +17,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JLabel;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
+import java.awt.Point;
 
 public class App {
 
@@ -28,6 +29,7 @@ public class App {
 				try {
 					App window = new App();
 					window.frmLojaauto.setVisible(true);
+					window.frmLojaauto.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -60,6 +62,7 @@ public class App {
 			public void mouseClicked(MouseEvent arg0) {
 				Atm atm = new Atm();
 				atm.setVisible(true);
+				atm.setLocationRelativeTo(null);
 				frmLojaauto.dispose();
 			}
 		});

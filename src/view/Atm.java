@@ -31,6 +31,7 @@ public class Atm extends JFrame {
 				try {
 					Atm frame = new Atm();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -59,6 +60,7 @@ public class Atm extends JFrame {
 			public void mouseClicked(MouseEvent arg0) {
 				App window = new App();
 				window.frmLojaauto.setVisible(true);
+				window.frmLojaauto.setLocationRelativeTo(null);
 				dispose();
 			}
 		});

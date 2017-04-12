@@ -3,6 +3,8 @@ package view;
 import java.awt.EventQueue;
 
 import javax.swing.JInternalFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
 
 public class ClienteAdd extends JInternalFrame {
 
@@ -27,6 +29,9 @@ public class ClienteAdd extends JInternalFrame {
 	 */
 	public ClienteAdd() {
 		setBounds(100, 100, 450, 300);
+		
+		JButton btnNewButton = new JButton("New button");
+		getContentPane().add(btnNewButton, BorderLayout.SOUTH);
 
 	}
 
