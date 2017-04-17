@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JInternalFrame;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
+import java.awt.Component;
 
 public class ClienteAdd extends JInternalFrame {
 
@@ -28,6 +29,13 @@ public class ClienteAdd extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public ClienteAdd() {
+		setVisible(true);
+		setMaximizable(true);
+		setTitle("Adicionar");
+		setIconifiable(true);
+		setResizable(true);
+		setClosable(true);
+		setRootPaneCheckingEnabled(false);
 		setBounds(100, 100, 450, 300);
 		
 		JButton btnNewButton = new JButton("New button");

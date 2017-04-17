@@ -18,6 +18,7 @@ import javax.swing.JLabel;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
 import java.awt.Point;
+import java.awt.Rectangle;
 
 public class App {
 

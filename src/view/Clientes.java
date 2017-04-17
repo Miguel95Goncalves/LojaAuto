@@ -18,6 +18,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import java.awt.Dimension;
 
 public class Clientes extends JFrame {
 
@@ -44,7 +45,7 @@ public class Clientes extends JFrame {
 	 */
 	public Clientes() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 425, 325);
+		setBounds(100, 100, 600, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -58,9 +59,10 @@ public class Clientes extends JFrame {
 		btnAdd.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				JFrame cliAdd = new JFrame("Frame Interna");
-				cliAdd.add(new ClienteAdd());
-				cliAdd.setVisible(true);
+				ClienteAdd cAdd = new ClienteAdd();
+				cAdd.setVisible(true);
+				contentPane.add(cAdd);
+				cAdd.moveToFront();
 			}
 		});
 		btnAdd.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -114,12 +116,12 @@ public class Clientes extends JFrame {
 		btnVolt.setBorderPainted(false);
 		btnVolt.setBorder(null);
 		btnVolt.setBackground(new Color(230, 230, 250));
-		btnVolt.setBounds(10, 211, 64, 64);
+		btnVolt.setBounds(10, 386, 64, 64);
 		contentPane.add(btnVolt);
 		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon(Clientes.class.getResource("/imagens/fundo.jpg")));
-		label.setBounds(0, 0, 409, 287);
+		label.setBounds(0, 0, 440, 98);
 		contentPane.add(label);
 	}
 }
